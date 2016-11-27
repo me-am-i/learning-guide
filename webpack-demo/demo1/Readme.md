@@ -1,4 +1,6 @@
-Webpack中文指南 http://zhaoda.net/webpack-handbook/index.html
+Webpack中文指南
+
+http://zhaoda.net/webpack-handbook/index.html https://github.com/ruanyf/webpack-demos
 
 Step1: npm init
 
@@ -13,6 +15,10 @@ Step5: webpack entry.js bundle.js OR webpack entry.js bundle.js --module-bind 'c
 Step6: create webpack.config.js
 
 Step7: use 'webpack' to instead of 'webpack entry.js bundle.js'
+
+Step8: npm install -g webpack-dev-server
+
+Step9: webpack-dev-server
 
 Webpack 会分析入口文件，解析包含依赖关系的各个文件。这些文件（模块）都打包到 bundle.js 。Webpack 会给每个模块分配一个唯一的 id 并通过这个 id 索引和访问模块。在页面启动时，会先执行 entry.js 中的代码，其它模块会在运行 require 的时候再执行。
 
