@@ -1,3 +1,5 @@
+Webpack中文指南 http://zhaoda.net/webpack-handbook/index.html
+
 Step1: npm init
 
 Step2: npm install webpack --save-dev
