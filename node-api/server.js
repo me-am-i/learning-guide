@@ -31,6 +31,12 @@ router.route('/bears')
       res.json({ message: 'Bear created' })
     })
   })
+  .get(function(req, res) {
+    Bear.find(function(err, bears) {
+      if (err) res.send(err)
+      res.json(bears)
+    })
+  })
 
 app.use('/api', router)
 
