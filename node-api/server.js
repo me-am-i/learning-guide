@@ -39,6 +39,14 @@ router.route('/bears')
     })
   })
 
+router.route('/bears/:bear_id')
+  .get(function(req, res) {
+    Bear.findById(req.params.bear_id, function(err, bear) {
+      if (err) req.send(err)
+      res.json(bear)
+    })
+  })
+
 app.use('/api', router)
 
 app.listen(port)
