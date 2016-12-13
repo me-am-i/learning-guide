@@ -10,10 +10,10 @@ var port = process.env.PORT || 8080
 var router = express.Router()
 
 router.get('/', function(req, res) {
-  res.json({ message: 'tangweikun! welcome to my api!'})
+  res.json({ message: 'tangweikun! welcome to my api!' })
 })
 
-app.use('api', router)
+app.use('/api', router)
 
 app.listen(port)
 console.log('Magic happens on port', port)
