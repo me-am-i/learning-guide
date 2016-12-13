@@ -13,6 +13,11 @@ var Bear = require('./app/models/bear')
 
 var router = express.Router()
 
+router.use(function(req, res, next) {
+  console.log('Something is happening')
+  next()
+})
+
 router.get('/', function(req, res) {
   res.json({ message: 'tangweikun! welcome to my api!' })
 })
