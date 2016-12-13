@@ -8,6 +8,7 @@ app.use(bodyParser.json())
 
 var port = process.env.PORT || 8080
 
+mongoose.Promise = global.Promise
 mongoose.connect('mongodb://127.0.0.1/test')
 var Bear = require('./app/models/bear')
 
@@ -25,7 +26,7 @@ router.get('/', function(req, res) {
 router.route('/bears')
   .post(function(req, res) {
     var bear = new Bear()
-    bear.name = req.body.name
+    bear.name = req.body.name || 'tangweikun'
     bear.save(function(err) {
       if (err)  res.send(err)
       res.json({ message: 'Bear created' })
