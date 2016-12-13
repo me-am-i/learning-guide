@@ -22,6 +22,16 @@ router.get('/', function(req, res) {
   res.json({ message: 'tangweikun! welcome to my api!' })
 })
 
+router.route('/bears')
+  .post(function(req, res) {
+    var bear = new Bear()
+    bear.name = req.body.name
+    bear.save(function(err) {
+      if (err)  res.send(err)
+      res.json({ message: 'Bear created' })
+    })
+  })
+
 app.use('/api', router)
 
 app.listen(port)
