@@ -1,6 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
+import Bear from './models/bear'
 
 var app = express()
 
@@ -11,7 +12,6 @@ var port = 8080
 
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://127.0.0.1/test')
-var Bear = require('./app/models/bear')
 
 var router = express.Router()
 
