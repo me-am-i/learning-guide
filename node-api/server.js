@@ -1,7 +1,8 @@
-var express = require('express')
+import express from 'express'
+import bodyParser from 'body-parser'
+import mongoose from 'mongoose'
+
 var app = express()
-var bodyParser = require('body-parser')
-var mongoose = require('mongoose')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
